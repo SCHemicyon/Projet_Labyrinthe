@@ -100,7 +100,7 @@
         }
 
         echo "<style>#id" . $_SESSION['catPos'][0] . "-" . $_SESSION['catPos'][1] . "{background-image:url('assets/img/chat-noir.png');background-size:16px 16px;}</style>";
-        //applyFog();
+        applyFog();
         //-----------------------------------------------------------------------------------
         ?>
 
