@@ -57,7 +57,7 @@ function fillGrid($t)
                     echo "<style>#id$i-$j{background-color:black;}</style>";
                     break;
                 default:
-                    echo "<style>#id$i-$j{background-color:#AAA;}</style>";
+                    echo "<style>#id$i-$j{background-color:#CCC;}</style>";
                     // echo "<style>#id$i-$j{background-color:rgb(" . 255 - $t[$i][$j] . ", 0, 0)</style>";
                     break;
             }
