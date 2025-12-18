@@ -54,7 +54,7 @@ function fillGrid($t)
                 //     echo "<style>#id$i-$j{background-color:white;}</style>";
                 //     break;
                 case $GLOBALS["WALL"];
-                    echo "<style>#id$i-$j{background-color:black;}</style>";
+                    echo "<style>#id$i-$j{background-image:url('assets/img/wall.png');background-size:16px 16px;background-color:black;}</style>";
                     break;
                 default:
                     echo "<style>#id$i-$j{background-color:#CCC;}</style>";

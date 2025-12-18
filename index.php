@@ -88,7 +88,7 @@ function applyFog()
 
     $centerX = ($catCol * $cellSize) + ($cellSize * 1.5);
     $centerY = ($catRow * $cellSize) + $cellSize / 2;
-    echo "<style>.fog{background:radial-gradient(circle at " . $centerX . "px " . $centerY . "px,rgba(0,0,0,0) 12px,rgba(115, 115, 115, 0.995) 20px);}</style>";
+    echo "<style>.fog{background:radial-gradient(circle at " . $centerX . "px " . $centerY . "px,rgba(0,0,0,0) 12px,rgba(115, 115, 115, 0.99) 20px);}</style>";
 }
 
 function moveCat($dir)
@@ -165,7 +165,7 @@ if ($_SESSION["fogofwar"] == true) {
     applyFog();
 }
 
-echo "<style>#id" . $_SESSION['catPos'][0] . "-" . $_SESSION['catPos'][1] . "{background-image:url('assets/img/chat-noir.png');background-size:16px 16px;background-color:red;}</style>";
+echo "<style>#id" . $_SESSION['catPos'][0] . "-" . $_SESSION['catPos'][1] . "{background-image:url('assets/img/chat-noir.png');background-size:16px 16px;background-color:#CCC;}</style>";
 echo "<style>#id" . $_SESSION['mousePos'][0] . "-" . $_SESSION['mousePos'][1] . "{background-image:url('assets/img/souris.png');background-size:16px 16px;background-color:green;}</style>";
 
 
