@@ -121,4 +121,4 @@ if (!isset($_SESSION['maze'])) {
 
 
 
-echo "<script>console.log('" . json_encode($_SESSION['maze']) . "')</script>";
+// echo "<script>console.log('" . json_encode($_SESSION['maze']) . "')</script>";
