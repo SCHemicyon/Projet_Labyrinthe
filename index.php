@@ -179,12 +179,12 @@ session_start();
 
             if ($_SESSION['catPos'] == $_SESSION['mousePos']) {
                 echo "<div class='modale'><h2>BRAVO</h2></div>";
-                echo "<style>.controls{display:none;}</style>";
+                echo "<style>.arrow{display:none;}</style>";
                 echo "<style>#fogofwar{display:none;}</style>";
             }
             if ($_SESSION['mousePos'] == $_SESSION['CHEESE']['pos']) {
                 echo "<div class='modale'><h2>PERDU</h2></div>";
-                echo "<style>.controls{display:none;}</style>";
+                echo "<style>.arrow{display:none;}</style>";
                 echo "<style>#fogofwar{display:none;}</style>";
             }
         }
