@@ -65,15 +65,33 @@ function fillGrid($t)
     }
 }
 
+function randomizePos($t, $Rmin, $Rmax, $Cmin, $Cmax){
+    $row = rand($Rmin, $Rmax);
+    $col = rand($Cmin, $Cmax);
+    while ($t[$row][$col] == -1) {
+        $row = rand($Rmin, $Rmax);
+        $col = rand($Cmin, $Cmax);
+    }
+    return [$row,$col];
+}
+
 function initAll($t)
 {
-    $row = rand(15, 23);
-    $col = rand(15, 23);
-    while ($t[$row][$col] == -1) {
-        $row = rand(15, 23);
-        $col = rand(15, 23);
+    $_SESSION["MOUSESTART"] = randomizePos($t, 15, 23, 15, 23);
+    $_SESSION["HAMMER"]["pos"] = randomizePos($t, 2, 8, 2, 8);
+    $_SESSION["HAMMER"]["picked"] = false;
+    $_SESSION["HAMMER"]["used"] = false;
+    $_SESSION["MUSH"]["pos"] = randomizePos($t, 2, 8, 9, 18);
+    $_SESSION["MUSH"]["picked"] = false;
+    $_SESSION["WEED"]["pos"] = randomizePos($t, 9, 18, 2, 8);
+    $_SESSION["WEED"]["picked"] = false;
+    $_SESSION["WEED"]["used"] = false;
+    $_SESSION["CHEESE"]["pos"] = randomizePos($t, 19, 23, 19, 23);
+    while($_SESSION["MOUSESTART"] == $_SESSION["CHEESE"]["pos"]){
+        $_SESSION["CHEESE"]["pos"] = randomizePos($t, 19, 23, 19, 23);
     }
-    $_SESSION["MOUSESTART"] = [$row, $col];
+    $_SESSION["CHEESE"]["picked"] = false;
+
 }
 
 //-----------------------------------------------------------------------
